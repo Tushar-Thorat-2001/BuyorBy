@@ -18,6 +18,8 @@
     <!--Custom CSS-->
     <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
 
     <title>BuyorBy| {% block title %} {% endblock title %} </title>
   </head>
@@ -26,10 +28,10 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
      <div class="container">
       
-       <a class="navbar-brand" href="/"><img src="{% static 'app/images/op.png' %}"  style="height: 80px;
+       <a class="navbar-brand" href="/"><img src="{% static 'app/images/op.png' %}"  style="height: 50px;
     margin-right: 5px;
     margin-top: -12px;
-}"> <b style="color:yellow;">BuyorBy</b></a></a>
+}" > <b style="color:yellow;">BuyorBy</b></a></a>
        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
          <span class="navbar-toggler-icon"></span>
        </button>
@@ -43,8 +45,8 @@
                Electronics
              </a>
              <ul class="dropdown-menu" aria-labelledby="electronicsDropdown">
-               <li><a class="dropdown-item" href="mobile">Mobile</a></li>
-               <li><a class="dropdown-item" href="laptop">Laptop</a></li>
+               <li><a class="dropdown-item" href="{% url 'mobile' %}">Mobile</a></li>
+               <li><a class="dropdown-item" href="{% url 'laptop' %}">Laptop</a></li>
              </ul>
            </li>
            <li class="nav-item dropdown">
@@ -52,10 +54,10 @@
                Fashion
              </a>
              <ul class="dropdown-menu" aria-labelledby="fashionDropdown">
-               <li><a class="dropdown-item" href="topwear">Top Wear</a></li>
-               <li><a class="dropdown-item" href="bottom">Bottom Wear</a></li>
-               <li><a class="dropdown-item" href="dress">Dress</a></li>
-               <li><a class="dropdown-item" href="india">Indian</a></li>
+               <li><a class="dropdown-item" href="{% url 'topwear' %}">Top Wear</a></li>
+               <li><a class="dropdown-item" href="{% url 'bottom' %}">Bottom Wear </a></li>
+               <li><a class="dropdown-item" href="{% url 'dress'%}">Dress</a></li>
+               <li><a class="dropdown-item" href="{% url 'india' %}">Indian</a></li>
              </ul>
            </li>
             <li class="nav-item dropdown">
@@ -63,8 +65,8 @@
                Fitness & Sport
              </a>
              <ul class="dropdown-menu" aria-labelledby="electronicsDropdown">
-               <li><a class="dropdown-item" href="sup">Gym Supplements</a></li>
-               <li><a class="dropdown-item" href="eq">Gym Equipment</a></li>
+               <li><a class="dropdown-item" href="{% url 'sup' %}">Gym Supplements</a></li>
+               <li><a class="dropdown-item" href="{% url 'eq' %}">Gym Equipment</a></li>
              </ul>
          </ul>
          <div>

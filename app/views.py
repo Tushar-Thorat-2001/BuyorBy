@@ -250,13 +250,13 @@ def payment_done(request):
 
 def bottom(request, data=None):
     if data == None:
-        bottoms = Product.objects.filter(category='B')
+        bottoms = Product.objects.filter(category='BW')
     elif data == 'UT' or data ==  'b6':
-        bottoms =  Product.objects.filter(category='B').filter(brand=data)
+        bottoms =  Product.objects.filter(category='BW').filter(brand=data)
     elif data == 'below':
-        bottoms =  Product.objects.filter(category='B').filter(discounted_price__lt=800)
+        bottoms =  Product.objects.filter(category='BW').filter(discounted_price__lt=800)
     elif data == 'above':
-        bottoms =  Product.objects.filter(category='B').filter(discounted_price__gt=800)
+        bottoms =  Product.objects.filter(category='BW').filter(discounted_price__gt=800)
     return render(request, 'app/bottom.html',{'bottoms':bottoms})
 
 def Dress(request, data=None):

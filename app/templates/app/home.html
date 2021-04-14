@@ -46,12 +46,13 @@
 {% block main-content %}
 <!-- 1st Product Slider -->
 <div class="m-3">
- <h2>BuyorBy BOttomWears</h2>
+ <h2 id ="op">BuyorBy BOttomWears</h2>
  <!-- Slider 1 -->
  <div class="owl-carousel" id="slider1">
  {% for b in   bottomwears %}
+ <!--  <a href="{% url 'product-detail' b.id %}" class="btn"><div class="item"><img src="{{b.product_image.url}}" alt="" height="200px"><span class="fw-bold">{{b.title}}</span><br><span class="fs-5">Rs.{{b.discounted_price}}</span></div></a> -->
   <a href="{% url 'product-detail' b.id %}" class="btn"><div class="item"><img src="{{b.product_image.url}}" alt="" height="200px"><span class="fw-bold">{{b.title}}</span><br><span class="fs-5">Rs.{{b.discounted_price}}</span></div></a>
-    {% endfor %}
+  {% endfor %}
  </div>
 </div>
 <!-- End 1st Product Slider -->
@@ -93,7 +94,7 @@
 
 <!-- 2nd Product Slider -->
 <div class="mx-3">
- <h2>BuyorBy TopWears</h2>
+ <h2 id ="op">BuyorBy TopWears</h2>
  <!-- Slider 2 -->
  <div class="owl-carousel" id="slider2">
  {% for t in   topwears %}
@@ -108,7 +109,7 @@
 
 <!-- 3nd Product Slider -->
 <div class="mx-3">
- <h2>BuyorBy Mobiles</h2>
+ <h2 id ="op">BuyorBy Mobiles</h2>
  <!-- Slider 3-->
  <div class="owl-carousel" id="slider3">
  {% for m in   mobiles %}
@@ -124,7 +125,7 @@
 
 <!--slider 4-->
 <div class="mx-3">
- <h2>BuyorBy Laptop</h2>
+ <h2 id ="op">BuyorBy Laptop</h2>
  <!-- Slider 2 -->
  <div class="owl-carousel" id="slider4">
  {% for L in  Laptop %}
@@ -171,7 +172,7 @@
 
 <!--slider 5-->
 <div class="mx-3">
- <h2>BuyorBy Dress</h2>
+ <h2 id ="op">BuyorBy Dress</h2>
  <!-- Slider 2 -->
  <div class="owl-carousel" id="slider5">
  {% for D in  Dress %}
@@ -184,7 +185,7 @@
 
  <!--slider 5-->
 <div class="mx-3">
- <h2>BuyorBy Indian</h2>
+ <h2 id="op">BuyorBy Indian</h2>
  <!-- Slider 2 -->
  <div class="owl-carousel" id="slider6">
  {% for ID in  Indian %}
@@ -204,7 +205,7 @@
 
 <!--slider 6-->
 <div class="mx-3">
- <h2>BuyorBy Supplements</h2>
+ <h2 id ="op">BuyorBy Supplements</h2>
  <!-- Slider 2 -->
  <div class="owl-carousel" id="slider7">
  {% for S in  supplements %}
@@ -216,7 +217,7 @@
 
  <!--slider 7-->
 <div class="mx-3">
- <h2>BuyorBy Equipments</h2>
+ <h2 id ="op">BuyorBy Equipments</h2>
  <!-- Slider 2 -->
  <div class="owl-carousel" id="slider8">
  {% for E in  equipments %}

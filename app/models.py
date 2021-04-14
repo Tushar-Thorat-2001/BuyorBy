@@ -46,7 +46,7 @@ CATEGORY_CHOICES = (
 ('M', 'Mobile'),
 ('L', 'Laptop'),
 ('TW', 'TOP Wear'),
-('B', 'Bottom Wear'),
+('BW', 'Bottom Wear'),
 ('ID',  'Indian'),
 ('D','Dress'),
 ('S', 'supplements'),
