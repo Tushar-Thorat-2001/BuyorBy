@@ -17,16 +17,31 @@
 
     <!--Custom CSS-->
     <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
 
     <title>BuyorBy| {% block title %} {% endblock title %} </title>
+    <style>
+    #i{
+      width:30px;
+      cursor: pointer;
+      margin-right:3%;
+    }
+     
+
+    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+
   </head>
      
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
      <div class="container">
       
-       <a class="navbar-brand" href="/"><b style="color:yellow;">BuyorBy</b></a></a>
+       <a class="navbar-brand" href="/"><img src="{% static 'app/images/op.png' %}"  style="width: 55px;
+    margin-right: 5px;
+    margin-top: -12px; margin-bottom: -12px;" ><b style="color:yellow;">BuyorBy</b></a></a>
        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
          <span class="navbar-toggler-icon"></span>
        </button>
@@ -40,8 +55,8 @@
                Electronics
              </a>
              <ul class="dropdown-menu" aria-labelledby="electronicsDropdown">
-               <li><a class="dropdown-item" href="mobile">Mobile</a></li>
-               <li><a class="dropdown-item" href="laptop">Laptop</a></li>
+               <li><a class="dropdown-item" href="{% url 'mobile' %}">Mobile</a></li>
+               <li><a class="dropdown-item" href="{% url 'laptop' %}">Laptop</a></li>
              </ul>
            </li>
            <li class="nav-item dropdown">
@@ -49,10 +64,10 @@
                Fashion
              </a>
              <ul class="dropdown-menu" aria-labelledby="fashionDropdown">
-               <li><a class="dropdown-item" href="topwear">Top Wear</a></li>
-               <li><a class="dropdown-item" href="bottom">Bottom Wear</a></li>
-               <li><a class="dropdown-item" href="dress">Dress</a></li>
-               <li><a class="dropdown-item" href="india">Indian</a></li>
+               <li><a class="dropdown-item" href="{%  url 'topwear' %}">Top Wear</a></li>
+               <li><a class="dropdown-item" href="{% url 'bottom' %}">Bottom Wear</a></li>
+               <li><a class="dropdown-item" href="{% url 'dress' %}">Dress</a></li>
+               <li><a class="dropdown-item" href="{% url 'india' %}">Indian</a></li>
              </ul>
            </li>
             <li class="nav-item dropdown">
@@ -60,8 +75,8 @@
                Fitness & Sport
              </a>
              <ul class="dropdown-menu" aria-labelledby="electronicsDropdown">
-               <li><a class="dropdown-item" href="sup">Gym Supplements</a></li>
-               <li><a class="dropdown-item" href="eq">Gym Equipment</a></li>
+               <li><a class="dropdown-item" href="{% url 'sup' %}">Gym Supplements</a></li>
+               <li><a class="dropdown-item" href="{% url 'eq' %}">Gym Equipment</a></li>
              </ul>
          </ul>
          <div>
@@ -94,6 +109,7 @@
          </div>
        </div>
      </div>
+      <img src="{% static 'app/images/banner/moon.png' %}" id="i">
     </nav>
     {% block banner_slider %} {% endblock banner_slider %}
     {% block livesale %} {% endblock livesale %}
@@ -102,7 +118,8 @@
     <!-- Start Footer -->
     <footer class="container-fluid bg-dark text-center p-2 mt-5">
         <small class="text-white">Copyright &copy; 2021 || Designed By Tushar Thorat || </small>
-        <img src="{% static 'app/images/payment.png' %}" alt="" srcset="" class="img-fluid" height="2px">
+         <a href="https://www.linkedin.com/in/tushar-thorat-aba200188/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+         <a href="https://github.com/Tushar-Thorat-2001" target="_blank"> <i class="fab fa-github"></i></a>
     </footer> <!-- End Footer -->
 
     <!-- Jquery -->
@@ -113,5 +130,19 @@
     <script src="{% static 'app/js/owl.carousel.min.js' %}"></script>
     <script src="{% static 'app/js/all.min.js' %}"></script>
     <script src="{% static 'app/js/myscript.js' %}"></script>
+    
+   <script>
+
+    var icon = document.getElementById("i")
+
+    icon.onclick = function(){
+        document.body.classList.toggle("dark")
+        if(document.body.classList.contains("dark")){
+        i.src="{% static 'app/images/banner/sun.png' %}";
+        }else{
+            icon.src="{% static 'app/images/banner/moon.png' %}";
+        }
+    }
+   </script> 
   </body>
 </html>

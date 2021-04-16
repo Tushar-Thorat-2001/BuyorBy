@@ -1,8 +1,32 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+
+body { background:var(--primary-colour);}
+:root{
+    --primary-colour:linear-gradient(to bottom left, #33ccff -9%, #ff99cc 92%);
+    --secondary-color:#212121; 
+
+}
+.dark{
+    --primary-colour:#101820FF;
+    --secondary-color:#FEE715FF;
+}
+
+
+
+
 .owl-carousel .item{
+
  /* border: 1px solid black; */
  font-size: 24px;
  text-align: center;
  margin-top: 20px;;
+ font-family: 'Kaushan Script', cursive;
+
+ color:var(--secondary-color);
 }
 
 .owl-next{
@@ -14,8 +38,52 @@
 .owl-prev span{
  font-size: 24px;
  font-weight: bold;
+ 
 }
 .owl-next span{
  font-size: 24px;
  font-weight: bold;
+ 
+}
+
+#op{
+    color:var(--secondary-color);
+    font-family: 'Kaushan Script', cursive;
+
+}
+.container{
+    color:var(--secondary-color);
+    font-family: 'Kaushan Script', cursive;
+
+}
+.card-body{
+    color: #212121;
+}
+nav{
+    color: var(--primary-colour);
+}
+
+h2 span{
+    color: orangered;
+    font-weight: bold;
+}
+.fw-bold p b{
+    color:#FEE715FF;
+}
+
+footer a{
+    margin-left:1%;
+}
+nav ul li a:hover{
+    color:#ff4321;
+}
+nav-item dropdown:hover{
+    color:#ff4321;
+}
+
+.owl-carousel{
+    transition: 1s;
+}
+.owl-carousel:hover{
+    transform: scale(1.2);
 }
