@@ -1,10 +1,19 @@
-*{
+ *{
 	margin: 0;
 	padding: 0;
 }
 
-body { background: linear-gradient(to bottom left, #33ccff -9%, #ff99cc 92%);}
+body { background:var(--primary-colour);}
 
+:root{
+    --primary-colour:linear-gradient(to bottom left, #33ccff -9%, #ff99cc 92%);
+    --secondary-color:#212121; 
+
+}
+.dark{
+    --primary-colour:#101820FF;
+    --secondary-color:#FEE715FF;
+}
 
 .owl-carousel .item{
  /* border: 1px solid black; */
